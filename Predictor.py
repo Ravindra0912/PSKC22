@@ -9,8 +9,8 @@ s2 = pd.read_csv('datasetrav.csv')
 s3 = pd.read_csv('datasetravnew.csv')
 
 df = pd.concat([s1,s2,s3])
-main_category_set = set(df['main_category'].values)
-category_set = set(df['category'].values)
+main_category_set = sorted(list(set(df['main_category'].values)))
+category_set = sorted(list(set(df['category'].values)))
 
 
 classifier = joblib.load('PSKC_model.sav')
