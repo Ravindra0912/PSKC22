@@ -75,7 +75,7 @@ def send():
         f_date = date(int(sdarr[0]), int(sdarr[1]), int(sdarr[2]))
         l_date = date(int(edarr[0]), int(edarr[1]), int(edarr[2]))
         delta = l_date - f_date
-        days = delta
+        days = delta.days
         pred_label = prediction(category, main_category, days, goal,description)
         return render_template('f1.html',pred = pred_label)
     return render_template('f1.html')
