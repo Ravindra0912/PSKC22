@@ -45,7 +45,6 @@
                   <div class="col-sm-6 mb-3 mb-sm-0">
                     <input list="browsers" name="main_category" class="form-control form-control-user" placeholder="Main Category">
                     <datalist id="browsers">
-                      {% set el = 'THIS IS A TEST' %}
                       {%for elem in mc %}
                         <option value="{{elem}}"></option>
                       {%endfor%}
